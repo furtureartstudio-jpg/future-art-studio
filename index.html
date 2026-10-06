@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Future Art Studio — Printing, custom design, branding and digital creative services.">
+<title>Future Art Studio | Creative Printing & Digital Design</title>
+<style>
+:root{--green:#0b7a45;--dark:#083b28;--lime:#25b96f;--light:#f4fbf7;--white:#fff;--text:#17352a;--muted:#64756d;--shadow:0 18px 50px rgba(8,59,40,.10)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid #e7eee9}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:20px;color:var(--dark)}
+.logo-area{width:54px;height:54px;border:2px dashed #91cdb0;border-radius:14px;background:#f5fcf8;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;flex:none}
+.logo-placeholder{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--green),var(--lime));display:grid;place-items:center;color:#fff;font-weight:900;font-size:14px}
+.logo-upload-text{position:absolute;bottom:2px;left:0;right:0;text-align:center;font-size:5px;font-weight:900;color:#0b7a45;letter-spacing:.4px}
+.logo-mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,var(--green),var(--lime));display:grid;place-items:center;color:#fff;font-weight:900;box-shadow:0 8px 22px rgba(11,122,69,.25)}
+nav{display:flex;gap:25px;align-items:center}
+nav a{font-weight:700;font-size:14px;color:#385349}
+nav a:hover{color:var(--green)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:12px;font-weight:800;border:0;cursor:pointer}
+.btn-primary{background:var(--green);color:#fff;box-shadow:0 10px 25px rgba(11,122,69,.22)}
+.btn-light{background:#fff;color:var(--green);border:1px solid #d8e7de}
+.hero{background:radial-gradient(circle at 85% 20%,#bdf0d3 0,transparent 32%),linear-gradient(135deg,#effbf4,#fff);padding:86px 0 72px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.badge{display:inline-block;padding:8px 13px;border-radius:999px;background:#ddf7e8;color:var(--green);font-weight:800;font-size:13px;margin-bottom:18px}
+h1{font-size:clamp(40px,6vw,72px);line-height:1.02;letter-spacing:-2px;color:var(--dark);margin-bottom:22px}
+.hero p{font-size:18px;color:var(--muted);max-width:650px;margin-bottom:28px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-card{background:#fff;border:1px solid #e2eee7;border-radius:28px;padding:24px;box-shadow:var(--shadow);position:relative}
+.mockup{height:380px;border-radius:20px;background:linear-gradient(145deg,#073b27,#16a55d);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.mockup:before,.mockup:after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.1)}
+.mockup:before{width:260px;height:260px;top:-80px;right:-60px}.mockup:after{width:220px;height:220px;bottom:-100px;left:-50px}
+.card-text{position:relative;z-index:2;color:#fff;text-align:center}.card-text .big{font-size:48px;font-weight:900;line-height:1}.card-text p{color:#dff8e9;font-size:15px;margin:10px 0 0}
+section{padding:82px 0}
+.section-head{text-align:center;max-width:700px;margin:0 auto 42px}
+.section-head h2{font-size:38px;line-height:1.1;color:var(--dark);margin-bottom:12px}
+.section-head p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service{padding:28px;border:1px solid #e5eee9;border-radius:20px;background:#fff;box-shadow:0 10px 30px rgba(8,59,40,.05);transition:.2s}
+.service:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.icon{width:50px;height:50px;border-radius:15px;background:#e3f8eb;color:var(--green);display:grid;place-items:center;font-size:23px;margin-bottom:17px}
+.service h3{margin-bottom:8px;color:var(--dark)}
+.service p{color:var(--muted);font-size:14px}
+.alt{background:var(--light)}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.product{border:1px solid #e4eee8;border-radius:18px;overflow:hidden;background:#fff}
+.product-img{height:180px;background:linear-gradient(135deg,#e6f8ed,#c6edd8);display:grid;place-items:center;font-size:48px}
+.product-body{padding:18px}.product h3{font-size:17px}.product p{font-size:13px;color:var(--muted);margin:5px 0 12px}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}
+.about-box{background:linear-gradient(145deg,#083b28,#0d8b50);border-radius:28px;padding:45px;color:#fff;min-height:340px;display:flex;flex-direction:column;justify-content:center}
+.about-box .number{font-size:60px;font-weight:900;line-height:1}
+.about-copy h2{font-size:38px;color:var(--dark);margin-bottom:15px}.about-copy p{color:var(--muted);margin-bottom:15px}
+.checks{display:grid;gap:10px;margin:20px 0}.checks div{font-weight:700}.checks span{color:var(--green);margin-right:8px}
+.contact{background:linear-gradient(135deg,#073b27,#0b7a45);color:#fff;border-radius:30px;padding:55px;display:grid;grid-template-columns:1fr .9fr;gap:40px}
+.contact h2{font-size:40px;line-height:1.1;margin-bottom:15px}.contact p{color:#d8f4e4}
+.contact-info{display:grid;gap:14px;margin-top:25px}.contact-item{background:rgba(255,255,255,.09);padding:14px 16px;border-radius:12px}
+form{background:#fff;padding:25px;border-radius:20px;color:var(--text)}
+input,textarea{width:100%;padding:13px 14px;border:1px solid #dbe8e1;border-radius:10px;margin-bottom:12px;font:inherit}textarea{min-height:120px;resize:vertical}
+footer{background:#052c1e;color:#cfe9dc;padding:30px 0;margin-top:70px}
+.footer{display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:13px}
+.social{display:flex;gap:12px}.social a{padding:8px 12px;border:1px solid rgba(255,255,255,.15);border-radius:9px}
+@media(max-width:850px){nav{display:none}.hero-grid,.about,.contact{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.products{grid-template-columns:1fr 1fr}.contact{padding:30px}}
+@media(max-width:520px){section{padding:60px 0}.grid,.products{grid-template-columns:1fr}.hero{padding:65px 0}.hero-card{margin-top:10px}.mockup{height:290px}.contact h2{font-size:32px}.footer{flex-direction:column;text-align:center}}
+
+.portfolio-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.portfolio-card{background:#fff;border:1px solid #e4eee8;border-radius:18px;overflow:hidden;box-shadow:0 8px 25px rgba(8,59,40,.05)}
+.portfolio-card>div:last-child{padding:16px}.portfolio-card b{display:block;color:var(--dark)}.portfolio-card small{color:var(--muted)}
+.portfolio-art{height:190px;display:grid;place-items:center;text-align:center;font-size:24px;font-weight:900;letter-spacing:2px;color:#fff;position:relative;overflow:hidden}
+.portfolio-art:before{content:"";position:absolute;width:170px;height:170px;border-radius:50%;background:rgba(255,255,255,.12);top:-70px;right:-50px}
+.portfolio-art span{position:relative;z-index:1}
+.art1{background:linear-gradient(135deg,#083b28,#19a960)}
+.art2{background:linear-gradient(135deg,#0b7a45,#62d69a)}
+.art3{background:linear-gradient(135deg,#062e22,#27b875)}
+.art4{background:linear-gradient(135deg,#126b46,#a1e7bf)}
+@media(max-width:850px){.portfolio-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.portfolio-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+<div class="container nav">
+<a class="logo" href="#home" aria-label="Future Art Studio home">
+  <span class="logo-area" title="Future Art Studio Logo">
+    <span class="logo-placeholder">FA</span>
+    <span class="logo-upload-text">YOUR LOGO</span>
+  </span>
+  <span>Future Art Studio</span>
+</a>
+<nav>
+<a href="#home">Home</a><a href="#services">Services</a><a href="#products">Products</a><a href="#portfolio">Portfolio</a><a href="#about">About</a><a href="#contact">Contact</a>
+</nav>
+<a class="btn btn-primary" href="https://wa.me/923304253605" target="_blank">WhatsApp</a>
+</div>
+</header>
+
+<main id="home">
+<section class="hero">
+<div class="container hero-grid">
+<div>
+<span class="badge">CREATIVE • PRINTING • DIGITAL</span>
+<h1>Turn your ideas into something unforgettable.</h1>
+<p>Future Art Studio creates professional custom printing, graphic design, branding and digital creative solutions for businesses, creators and individuals.</p>
+<div class="actions"><a class="btn btn-primary" href="#contact">Get a Quote</a><a class="btn btn-light" href="#services">Explore Services</a></div>
+</div>
+<div class="hero-card"><div class="mockup"><div class="card-text">
+  <div style="width:120px;height:120px;margin:0 auto 18px;border:3px solid rgba(255,255,255,.7);border-radius:32px;display:grid;place-items:center;background:rgba(255,255,255,.10)">
+    <div style="font-size:38px;font-weight:900">FA</div>
+  </div>
+  <div class="big">FAS</div>
+  <p>Future Art Studio<br>Design • Print • Create</p>
+</div></div></div>
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+<div class="section-head"><h2>What We Do</h2><p>Creative services designed to make your brand look professional, memorable and digital-ready.</p>
+<div style="margin-top:14px;display:inline-block;padding:8px 13px;border-radius:999px;background:#eefaf3;color:#0b7a45;font-size:12px;font-weight:800">LOGO • BRANDING • PRINTING • DIGITAL</div></div>
+<div class="grid">
+<div class="service"><div class="icon">🎨</div><h3>Graphic Design</h3><p>Logos, social media creatives, posters, banners, business cards and custom artwork.</p></div>
+<div class="service"><div class="icon">👕</div><h3>Custom Printing</h3><p>Custom T-shirts, mugs, covers, promotional products and print-ready artwork.</p></div>
+<div class="service"><div class="icon">✨</div><h3>Branding</h3><p>Professional visual identity, brand assets and consistent designs for your business.</p></div>
+<div class="service"><div class="icon">📱</div><h3>Social Media Design</h3><p>Modern posts, covers, ads, promotional graphics and content visuals for social platforms.</p></div>
+<div class="service"><div class="icon">💻</div><h3>Digital Creative</h3><p>Digital-ready designs for websites, online stores, campaigns and marketing projects.</p></div>
+<div class="service"><div class="icon">🖨️</div><h3>Print-Ready Files</h3><p>High-quality files prepared for professional printing with the right dimensions and resolution.</p></div>
+</div>
+</div>
+</section>
+
+<section id="products" class="alt">
+<div class="container">
+<div class="section-head"><h2>Custom Products</h2><p>Give everyday products your own style.</p></div>
+<div class="products">
+<div class="product"><div class="product-img">👕</div><div class="product-body"><h3>Custom T-Shirts</h3><p>Personalized names, logos and artwork.</p><a href="#contact" class="btn btn-primary">Order Now</a></div></div>
+<div class="product"><div class="product-img">☕</div><div class="product-body"><h3>Custom Mugs</h3><p>Personal, business and gift designs.</p><a href="#contact" class="btn btn-primary">Order Now</a></div></div>
+<div class="product"><div class="product-img">📱</div><div class="product-body"><h3>Phone Covers</h3><p>Creative custom designs for your device.</p><a href="#contact" class="btn btn-primary">Order Now</a></div></div>
+<div class="product"><div class="product-img">🪪</div><div class="product-body"><h3>Business Cards</h3><p>Clean, premium and professional cards.</p><a href="#contact" class="btn btn-primary">Order Now</a></div></div>
+</div>
+</div>
+</section>
+
+
+<section id="portfolio" class="alt">
+<div class="container">
+<div class="section-head"><h2>Our Creative Work</h2><p>A few examples of the creative direction Future Art Studio can bring to your brand.</p></div>
+<div class="portfolio-grid">
+<div class="portfolio-card"><div class="portfolio-art art1"><span>BRAND<br>IDENTITY</span></div><div><b>Brand Identity</b><small>Logo & visual branding</small></div></div>
+<div class="portfolio-card"><div class="portfolio-art art2"><span>CUSTOM<br>PRINT</span></div><div><b>Custom Printing</b><small>T-shirts & merchandise</small></div></div>
+<div class="portfolio-card"><div class="portfolio-art art3"><span>SOCIAL<br>MEDIA</span></div><div><b>Social Media</b><small>Posts & promotional creatives</small></div></div>
+<div class="portfolio-card"><div class="portfolio-art art4"><span>PRODUCT<br>DESIGN</span></div><div><b>Product Design</b><small>Mugs, covers & more</small></div></div>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container about">
+<div class="about-box"><div class="number">FAS</div><h3 style="font-size:26px;margin-top:15px">Future Art Studio</h3><p style="margin-top:8px;color:#d8f4e4">Professional ideas. Creative execution. Digital impact.</p></div>
+<div class="about-copy"><h2>Built for modern brands.</h2><p>Future Art Studio is a creative studio focused on making businesses, products and personal projects look professional across print and digital platforms.</p><div class="checks"><div><span>✓</span> Clean & professional design</div><div><span>✓</span> High-quality creative work</div><div><span>✓</span> Custom solutions for every project</div><div><span>✓</span> Social-media-ready content</div></div><a class="btn btn-primary" href="#contact">Start Your Project</a></div>
+</div>
+</section>
+
+<section id="contact" class="alt">
+<div class="container">
+<div class="contact">
+<div>
+<h2>Let’s create something great.</h2>
+<p>Tell us what you need and we’ll help turn your idea into a professional design or printed product.</p>
+<div class="contact-info">
+<div class="contact-item">📞 <strong>0330 4253605</strong></div>
+<div class="contact-item">📍 Bypass Kamalia, Pakistan</div>
+<div class="contact-item">💬 WhatsApp available for orders & inquiries</div>
+</div>
+</div>
+<form onsubmit="sendWhatsApp(event)">
+<input id="name" placeholder="Your name" required>
+<input id="service" placeholder="What do you need? (e.g. T-shirt design)" required>
+<textarea id="message" placeholder="Tell us about your project"></textarea>
+<button class="btn btn-primary" style="width:100%" type="submit">Send on WhatsApp</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container footer">
+<div>© 2026 Future Art Studio. All rights reserved.</div><div><a href="https://wa.me/923304253605" target="_blank">Start a Project →</a></div>
+<div class="social"><a href="https://www.facebook.com/" target="_blank">Facebook</a><a href="https://www.instagram.com/" target="_blank">Instagram</a><a href="https://www.tiktok.com/" target="_blank">TikTok</a></div>
+</div>
+</footer>
+<script>
+function sendWhatsApp(e){
+ e.preventDefault();
+ const n=document.getElementById('name').value;
+ const s=document.getElementById('service').value;
+ const m=document.getElementById('message').value;
+ const text=`Hello Future Art Studio!%0A%0AName: ${encodeURIComponent(n)}%0AService: ${encodeURIComponent(s)}%0AMessage: ${encodeURIComponent(m)}`;
+ window.open(`https://wa.me/923304253605?text=${text}`,'_blank');
+}
+</script>
+</body>
+</html>
